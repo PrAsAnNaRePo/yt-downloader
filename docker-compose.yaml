@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8502:8502
+    volumes:
+      - vol:/app/data
+
+volumes:
+  vol:
