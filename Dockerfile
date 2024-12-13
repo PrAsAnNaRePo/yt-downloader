@@ -14,6 +14,6 @@ RUN python3.10 -m pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8502
+EXPOSE 8503
 
-CMD ["streamlit", "run", "app.py", "--server.port=8502", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app.py", "--server.port=8503", "--server.address=0.0.0.0"]
