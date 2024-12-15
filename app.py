@@ -160,7 +160,7 @@ def main():
             # Input for start and end times
             col1, col2 = st.columns(2)
             with col1:
-                start_time = st.number_input("Start Time (seconds)", min_value=0.0, step=1.0, value=0.0)
+                start_time = st.number_input("Start Time (minutes)", min_value=0.0, step=1.0, value=0.0)
             with col2:
                 video_path = os.path.join('/app/data/downloads', selected_video)
                 video = VideoFileClip(video_path)
@@ -168,7 +168,7 @@ def main():
                 video.close()
                 
                 end_time = st.number_input(
-                    "End Time (seconds)", 
+                    "End Time (minutes)", 
                     min_value=0.0, 
                     max_value=max_duration, 
                     value=max_duration, 
@@ -180,8 +180,8 @@ def main():
                     output_filename = f"trimmed_{selected_video}"
                     trimmed_path = trim_video(
                         os.path.join('/app/data/downloads', selected_video), 
-                        start_time, 
-                        end_time, 
+                        start_time*60, 
+                        end_time*60, 
                         os.path.join('/app/data/trimmed_videos', output_filename)
                     )
                     
