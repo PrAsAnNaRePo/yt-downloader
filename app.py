@@ -170,8 +170,8 @@ def main():
                 end_time = st.number_input(
                     "End Time (minutes)", 
                     min_value=0.0, 
-                    max_value=max_duration, 
-                    value=max_duration, 
+                    max_value=max_duration/60, 
+                    value=max_duration/60, 
                     step=1.0
                 )
             
