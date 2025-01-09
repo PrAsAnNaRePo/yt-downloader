@@ -24,7 +24,7 @@ def download_youtube_video(url, output_path, quality_option):
             'ignoreerrors': False,
             'no_oversized_thumbnails': True,
             'progress_hooks': [download_progress],
-            'cookiefile': 'cookies.txt',
+            'cookiefile': '/app/cookies.txt',
         }
         
         class MyLogger:
